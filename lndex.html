@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html ><head>
+<title>YAMEEN DIGITECH Auto Exploit + Leeful Loader for 9.00 FW</title>
+<link rel="stylesheet prefetch" href="Style.css">
+<style>
+html, body {
+//background-image: url('1.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+//background-color: #24272b;
+color: white;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+}
+  .themes {
+   width:98%;
+   margin:0 auto;
+   margin-left:2%;
+   margin-top:2%;
+  }
+  .theme {
+    background:rgba(0,0,0,0.75);
+    width:14.1%;
+    text-align:center;
+    display:inline-block;
+    margin-right:2.5%;
+    margin-bottom:2.5%;
+  }
+  .theme img {
+    width:100%;
+  }
+  .theme span  {
+   color:white;
+   display:block;
+   padding:10px;
+  }
+
+		button2 {
+		  background:rgba(0,0,0,0.5);
+		  box-shadow: 0 5px 20px 0 white;
+		  border: 2px solid black;
+		  border-radius: 10px;
+		  color: white;
+		  text-decoration: none;
+		  width: 200px;
+          height: 40px;
+		  display:inline-table;
+		  font-family: system-ui;
+		  text-align: center;
+		}
+
+		button2:focus,
+		button2:hover {
+		  color: White;
+		  box-shadow: 0 5px 50px 0 white;
+		  background-color: #87FF33;
+          border-radius: 10px;
+		}
+
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+.btn {
+background-color: #003263;
+color: white;
+width: 260px;
+height: 49px;
+padding-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 8px;
+margin-right: 8px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+}
+.btn:hover {
+background-color: #0058b1;
+}
+.btn-toolbox {
+background-color: #ae2301;
+}
+.btn-toolbox:hover {
+background-color: #d42a01;
+}
+</style>
+<script>
+function DLProgress(e){
+	parent.ScrOverlay.style.display="block";
+	Percent=(Math.round(e.loaded / e.total * 100));
+	parent.cacheUPDtxt.innerHTML="Installing Offline Cache: " + Percent + "%";
+	parent.CacheBar.style.width=Percent + '%';
+}
+function DisplayCacheProgress(){
+	setTimeout(function(){parent.cacheUPDtxt.innerHTML="Cache Installed Successfully.Turn off Internet & Reopen the Browser!!";},1000);}
+	window.applicationCache.addEventListener("progress",DLProgress,false);
+	window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+	window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+	window.applicationCache.onerror=function(e){parent.cacheUPDtxt.innerHTML="Error Installing Cache";
+};
+</script>
+<script src="auto.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+<script src="payload.js"></script>
+</head>
+<body onload="load_exploit();">
+<div id="container"  style="">
+<div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
+<div id=CacheProgress><div id=CacheBar></div></div></div>
+<hr><span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:white;'><h1 id="msgs">YAMEEN DIGITECH Auto Exploit + Leeful Loader for 9.00 FW</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<hr>
+<div class="about" ><a href="about.html" >About Us</a></div>
+<div class="about2" ><a href="theme.html" >Themes</a></div>
+<div id="myModal" class="modal">
+  <!-- MODAL CONTENTS -->
+  <div class="modal-content">
+  <span class="close"></span>
+    <div class="modal-body">
+
+    <br><br><br>
+    </div>
+  </div>
+</div>
+<script>
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<h1 id=msgs2 style='font-size:25px;text-align:center;color: yellow;'>STATUS</h1><hr>
+<br>
+<div style='font-size:20px;text-align:center;color:#87FF33;'>Bin Loader / Mira / GoldHen</div>
+<a href="binloader.html"><button style='font-size:20px;text-align:center;color:#4863A0;margin-left:60px' class="pointer" onMouseOver="msgs2.innerHTML='Loads a bin file sent to the PS4 IP address on port 9020'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Bin Loader </B></button></a>
+<a href="mira.html#p0=mira.js&p1=mira2.js"><button style='font-size:22px;text-align:center;color:#4863A0;background-color: golden;width: 200px;' class="pointer" onMouseOver="msgs2.innerHTML='Mira Orbis for PS4 9.00 Fw'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Mira </B></button></a>
+<button style='font-size:22px;text-align:center;color:white;background-color: goldenrod;width: 200px;' class="pointer" onclick=load_goldhen212() onMouseOver="msgs2.innerHTML='GoldHEN 2.1.2 [ Fixed config parser ] by SISTRo'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GoldHen 2.1.2 </B></button></a>
+<button style='font-size:22px;text-align:center;color:white;background-color: goldenrod;width: 200px;' class="pointer" onclick=load_goldhen222() onMouseOver="msgs2.innerHTML='GoldHEN 2.2.2 [ Added cheat absolute offset support & Fixed some bugs ] by SISTRo'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GoldHen 2.2.2 </B></button></a>
+<button style='font-size:22px;text-align:center;color:white;background-color: goldenrod;width: 200px;' class="pointer" onclick=load_goldhen23b2() onMouseOver="msgs2.innerHTML='GoldHEN 2.3b2 [ Added TitleId and AppVer labels , PS2 cheat support ... ] by SISTRo'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GoldHen 2.3b2 </B></button></a>
+<br>
+<div style=font-size:20px;text-align:center;color:#87FF33;>Payloads</div>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;margin-left:60px;' class="pointer" onclick=load_app2usb() onMouseOver="msgs2.innerHTML='Move installed games to an external USB drive'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> App2USB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 90px;' class="pointer" onclick=load_ftp() onMouseOver="msgs2.innerHTML='A full access FTP server for the PS4'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> FTP </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 90px;' class="pointer" onclick=load_todex() onMouseOver="msgs2.innerHTML='unlocks some debug features available on Devkit'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> ToDex </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 130px;' class="pointer" onclick=load_dbackup() onMouseOver="msgs2.innerHTML='Create a backup of important database files ans User Data'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> DB Backup </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 130px;' class="pointer" onclick=load_dbrestore() onMouseOver="msgs2.innerHTML='Restore a backup of the database files and User Data'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> DB Restore </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_exitidu() onMouseOver="msgs2.innerHTML='Disable IDU Mode'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Exit IDU </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;margin-left:5px;width: 180px;' class="pointer" onclick=load_permUart() onMouseOver="msgs2.innerHTML='Permanent Uart'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Permanent Uart </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 150px;' class="pointer" onclick=load_rifRen() onMouseOver="msgs2.innerHTML='Rif Renamer'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Rif Renamer </B></button></a>
+<a href="http://nightkinghost.com/trainer/index.html"><button style='font-size:20px;text-align:center;color:#4863A0;width: 130px' class="pointer" onMouseOver="msgs2.innerHTML='Loads PS4 Traine Offline'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Ps4 trainer </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 140px;' class="pointer" onclick=load_fanthreshold() onMouseOver="msgs2.innerHTML='Set the desired temperature that the PS4 fan starts'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Fan Selector </B></button><select id="tempC"></select><a style='font-size:17px;text-align:center;color:white;'>&#176;C</a>
+<br>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_historyBlocker() onMouseOver="msgs2.innerHTML='Disable the auto opening of the last page used in the PS4 WebBrowser'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> History Blocker </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_disableUpdates() onMouseOver="msgs2.innerHTML='Creates dummy files in the PS4 update folder'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B>Disable Update</B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_enablebUpdates() onMouseOver="msgs2.innerHTML='Removes the dummy files in the PS4 update folder'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Enable Update </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_ebrowser() onMouseOver="msgs2.innerHTML='Enable Browser'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Enable Browser </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 150px'' class="pointer" onclick=load_disbAslr() onMouseOver="msgs2.innerHTML='disable aslr'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Disable Aslr </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_ps4parentalcontrols() onMouseOver="msgs2.innerHTML='PS4 Parental Controls Passcode Notification - if shows 0000 that means passcode is not set'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Parental Controls </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 160px;' class="pointer" onclick=load_todexon() onMouseOver="msgs2.innerHTML='unlock some debug features availble on testkit'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> ToDex Enable </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 160px;' class="pointer" onclick=load_todexoff() onMouseOver="msgs2.innerHTML='Disable ToDEx'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> ToDex Disable </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:red;color:white;width: 160px' class="pointer" onclick=load_orbistoolbox() onMouseOver="msgs2.innerHTML='Orbis Toolbox Loader Alfa v1190'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Orbis Toolbox </B></button></a>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:green;color:white;width: 130px' class="pointer" onclick=load_ps4debug() onMouseOver="msgs2.innerHTML='Ps4 Debugger '" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Ps4Debug </B></button></a>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:#76411D;color:white;width: 160px' class="pointer" onclick=load_webactivator() onMouseOver="msgs2.innerHTML='PSN Offline Web Activitor - By Sleirsgoevy'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Web Activator </B></button></a>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:blue;color:white;width: 110px' class="pointer" onclick=load_webrte() onMouseOver="msgs2.innerHTML='Webrte for mods Game'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Webrte </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 140px' class="pointer" onclick=load_kernelClock() onMouseOver="msgs2.innerHTML='Change clock kernel'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Kernel Clock </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 180px;' class="pointer" onclick=load_moduleDump() onMouseOver="msgs2.innerHTML='module dumper'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Module Dumper </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 170px;' class="pointer" onclick=load_kerneldumper() onMouseOver="msgs2.innerHTML='Dump Kernel As Bin format File in Your External flash Drive'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Kernel Dumper </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 160px;' class="pointer" onclick=load_gamedumper() onMouseOver="msgs2.innerHTML='Dump Games only to a USB drive by Leeful'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Game Dumper </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 170px;' class="pointer" onclick=load_updatedumper() onMouseOver="msgs2.innerHTML='Dump Games Update to a USB drive by Leeful'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Update Dumper </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 150px;' class="pointer" onclick=load_mgu() onMouseOver="msgs2.innerHTML='Dump Merged Games and Update to a USB drive by Leeful'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> MGU Dumper </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 150px;' class="pointer" onclick=load_sgu() onMouseOver="msgs2.innerHTML='Dump Separate Games and Update to a USB drive by Leeful'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> SGU Dumper </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_linux1() onMouseOver="msgs2.innerHTML='Linux Loader 1GB Video Ram and 7GB System Ram By Ps3ita Team.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux Ps3ita 1GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_linux2() onMouseOver="msgs2.innerHTML='Linux Loader 2GB Video Ram and 6GB System Ram By Ps3ita Team.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux Ps3ita 2GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_linux3() onMouseOver="msgs2.innerHTML='Linux Loader 3GB Video Ram and 5GB System Ram By Ps3ita Team.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux Ps3ita 3GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_linux4() onMouseOver="msgs2.innerHTML='Linux Loader 4GB Video Ram and 4GB System Ram By Ps3ita Team.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux Ps3ita 4GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_linux5() onMouseOver="msgs2.innerHTML='Linux Loader 5GB Video Ram and 3GB System Ram By Ps3ita Team.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux Ps3ita 5GB </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_nlinux1() onMouseOver="msgs2.innerHTML='Linux Loader 1GB Video Ram and 7GB System Ram.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux 1GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_nlinux2() onMouseOver="msgs2.innerHTML='Linux Loader 2GB Video Ram and 6GB System Ram.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux 2GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_nlinux3() onMouseOver="msgs2.innerHTML='Linux Loader 3GB Video Ram and 5GB System Ram.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux 3GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_nlinux4() onMouseOver="msgs2.innerHTML='Linux Loader 4GB Video Ram and 4GB System Ram.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux 4GB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 120px;' class="pointer" onclick=load_nlinux5() onMouseOver="msgs2.innerHTML='Linux Loader 5GB Video Ram and 3GB System Ram.'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux 5GB </B></button></a>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:purple;color:white;width: 260px' class="pointer" onclick=load_WhosThatSouthbridge() onMouseOver="msgs2.innerHTML='Whos That Southbridge ( Linux Payload )'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Whos That Southbridge </B></button></a>
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;background-color:red;color:white;width: 200px;' class="pointer" onclick=load_pkgbackup() onMouseOver="msgs2.innerHTML='Modded Version of App Dumper to Backup Your PKG files v1.1 To The External Hdd'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> PKG BACKUP v1.1 </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_gtabeef133() onMouseOver="msgs2.innerHTML='GTA V Beef Queef Mod v1.33 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Beef v1.33 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_gtabeef134() onMouseOver="msgs2.innerHTML='GTA V Beef Queef Mod v1.34 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Beef v1.34 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 190px;' class="pointer" onclick=load_gtabeef138() onMouseOver="msgs2.innerHTML='GTA V Beef Queef Mod v1.38 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Beef v1.38 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 180px;' class="pointer" onclick=load_gta100() onMouseOver="msgs2.innerHTML='GTA V ArabicGuy Mod v1.00 - in Game active Menu with L1+R1'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Ar v1.00 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 180px;' class="pointer" onclick=load_gta127() onMouseOver="msgs2.innerHTML='GTA V ArabicGuy Mod v1.27 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Ar v1.27 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 180px;' class="pointer" onclick=load_gta132() onMouseOver="msgs2.innerHTML='GTA V ArabicGuy Mod v1.32 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Ar v1.32 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 180px;' class="pointer" onclick=load_gta133() onMouseOver="msgs2.innerHTML='GTA V ArabicGuy Mod v1.33 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Ar v1.33 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtawildmodz132() onMouseOver="msgs2.innerHTML='GTA V WildeModz Mod v1.32 - in Game active Menu with Left Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V WildeModz v1.32 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtawildmodz133() onMouseOver="msgs2.innerHTML='GTA V WildeModz Mod v1.33 - in Game active Menu with Left Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V WildeModz v1.33 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtawildmodz138() onMouseOver="msgs2.innerHTML='GTA V WildeModz Mod v1.38 - in Game active Menu with Left Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V WildeModz v1.38 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtaexpulsion138() onMouseOver="msgs2.innerHTML='GTA V Expulsion Mod v1.38 By LushModz V4.0 - in Game active Menu with Right Pad + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Expulsion v1.38 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtalamance100b() onMouseOver="msgs2.innerHTML='Lamance for GTA V Version 1.00 ( Beta ) By david1337hax - Active ---> Right+Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Lamance v1.00 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0;width: 250px;' class="pointer" onclick=load_gtalamance138v09() onMouseOver="msgs2.innerHTML='GTA V Lamance Mod v1.38 By david1337hax v0.9 - in Game active Menu with  Dpad Right + Square'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GTA V Lamance v1.38 </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;color:#FF002A;width: 150px;' class="pointer" onclick=load_rdr2100() onMouseOver="msgs2.innerHTML='Red dead redemtion 2 mod menu 1.00 - V1.3.7 Beta by RF0oDxM0Dz (R1 + Square)'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> RDR2 V1.00 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#FF002A;width: 150px;' class="pointer" onclick=load_rdr2113() onMouseOver="msgs2.innerHTML='Red dead redemtion 2 mod menu 1.13 - V1.3.6 by RF0oDxM0Dz (R1 + Square)'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> RDR2 V1.13 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#FF002A;width: 150px;' class="pointer" onclick=load_rdr2119() onMouseOver="msgs2.innerHTML='Red dead redemtion 2 mod menu 1.19 - V1.3.6 by RF0oDxM0Dz (R1 + Square)'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> RDR2 V1.19 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#FF002A;width: 150px;' class="pointer" onclick=load_rdr2124() onMouseOver="msgs2.innerHTML='Red dead redemtion 2 mod menu 1.24 - V1.3.7 Beta by RF0oDxM0Dz (R1 + Square)'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> RDR2 V1.24 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#FF002A;width: 150px;' class="pointer" onclick=load_rdr2129() onMouseOver="msgs2.innerHTML='Red dead redemtion 2 mod menu 1.29 - V1.3.7 Beta by RF0oDxM0Dz (R1 + Square)'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> RDR2 V1.29 </B></button></a>
+<br><br>
+<br><br>
+    <a style='font-size:25px;text-align:center;color:#FFD700;'>
+	 📞 YAMEEN DIGITECH - Phone 📞 : <a style='font-size:25px;text-align:center;color:white;'>
+		 
+		07064610415 &nbsp;
+
+<script type="text/javascript">
+ if(localStorage.getItem("theme")==null){
+   localStorage.setItem("theme","1.jpg")
+ }
+ document.body.style.background = "url('"+localStorage.getItem("theme")+"')"
+ document.body.style.backgroundSize = "cover"
+ var imgs = ["1.jpg","2.jpg"];
+ render()
+ function render(){
+     document.querySelector(".themes").innerHTML=""
+	 for(let i=0;i<imgs.length;i++){
+	    var selectText = "Select"
+	    var textColor = "white"
+	    if(localStorage.theme==imgs[i]){
+	      selectText="Selected"
+	      textColor="green"
+	    }
+	 	document.querySelector(".themes").innerHTML+='<div class="theme" ><img src="img/'+imgs[i]+'" ><span style="color:'+textColor+';" onclick="set('+i+')">'+selectText+'</span></div>';
+	 }
+ }
+ function set(i){
+    localStorage.setItem("theme",imgs[i])
+    render()
+ 	document.body.style.background = "url('"+imgs[i]+"')"
+ 	document.body.style.backgroundSize = "cover"
+ }
+</script>
+<script>
+for(var i=40; i<=79; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+</script>
+</body>
+</html>
